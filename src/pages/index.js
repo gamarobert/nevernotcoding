@@ -6,7 +6,19 @@ import logo from "../../content/assets/Logo.svg"
 import Tabs from "../components/Tabs.js"
 
 import indexStyle from "./index.module.css"
+
 const BlogIndex = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges
+  const categories = [
+    ...new Set(
+      posts.map(({ node }) => {
+        return node.frontmatter.category
+      })
+    ),
+  ]
+
+  console.log(categories)
+
   return (
     <Layout title={data.site.siteMetadata.title}>
       <SEO title="Blog" />
@@ -15,8 +27,23 @@ const BlogIndex = ({ data }) => {
       </div>
 
       <Tabs>
-        {data.allMarkdownRemark.edges.map(({ node }) => {
-          return <div key={node.id} label={node.frontmatter.category}></div>
+        {categories.map(category => {
+          return (
+            <div key={category} label={category}>
+              {posts.map(({ node }) => {
+                if (node.frontmatter.category === category) {
+                  return (
+                    <>
+                      <h1>{node.frontmatter.title}</h1>
+                      <p>{node.excerpt}</p>
+                    </>
+                  )
+                } else {
+                  return undefined
+                }
+              })}
+            </div>
+          )
         })}
       </Tabs>
     </Layout>
@@ -38,6 +65,7 @@ export const query = graphql`
             title
             category
           }
+          excerpt
         }
       }
     }
