@@ -9,6 +9,7 @@ import "../global.css"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
+
   const categories = [
     ...new Set(
       posts.map(({ node }) => {
