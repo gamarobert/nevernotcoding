@@ -1,0 +1,47 @@
+.social-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+}
+
+.social-container > p {
+  font-weight: bolder;
+}
+
+.social-icon {
+  padding: 1rem;
+  margin: 5px 0;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0 35% 35% 0;
+  color: black;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  opacity: 0.9;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.instagram {
+  background: #125688;
+  color: white;
+}
+
+/* TODO media queries */

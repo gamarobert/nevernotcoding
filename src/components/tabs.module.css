@@ -1,0 +1,31 @@
+.tabs {
+  margin-top: 5rem;
+  overflow-x: scroll;
+  /* IE 10+ */
+  -ms-overflow-style: none;
+  /* Firefox */
+  overflow: -moz-scrollbars-none;
+  white-space: nowrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-left: 5px solid #463eca;
+  border-right: 5px solid #463eca;
+  background: #ebe9e9;
+  scrollbar-width: thin;
+}
+
+.tabs::-webkit-scrollbar {
+  /* Safari and Chrome */
+  display: none;
+}
+
+.tab-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-content {
+  margin: 0 10px;
+}

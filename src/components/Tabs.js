@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Tab from "../components/Tab.js"
 import "../global.css"
+import tabsStyles from "./tabs.module.css"
 
 const Tabs = props => {
   const [active, setActive] = useState(props.children[0].props.label)
@@ -8,10 +9,13 @@ const Tabs = props => {
   const onClickTab = label => {
     setActive(label)
   }
+
+  const { tabs, tabList, tabContent } = tabsStyles
+
   return (
     <>
-      <div className="tabs">
-        <ul className="tab-list" role="tablist">
+      <div className={tabs}>
+        <ul className={tabList} role="tablist">
           {props.children.map(child => {
             const { label } = child.props
             return (
@@ -26,7 +30,7 @@ const Tabs = props => {
         </ul>
       </div>
 
-      <div className="tab-content">
+      <div className={tabContent}>
         {props.children.map(child => {
           if (child.props.label === active) return child.props.children
           return undefined

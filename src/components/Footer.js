@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
+import footerStyles from "./footer.module.css"
+
 const Footer = () => {
   const [state, setState] = useState({
     email: "",
@@ -25,17 +27,18 @@ const Footer = () => {
   }
 
   return (
-    <footer className="footer">
-      <form className="news-letter" onSubmit={handleSubmit}>
+    <footer className={footerStyles.footer}>
+      <form className={footerStyles.newsLetter} onSubmit={handleSubmit}>
         <h3>Sign Up For Our News Letter</h3>
         <input
-          className="news-letter-input"
+          className={footerStyles.newsLetterInput}
           placeholder="Email"
           onChange={handleEmailChange}
         />
         <input
           type="submit"
-          className="button submit-btn"
+          // className="button submit-btn"
+          className={footerStyles.submitBtn}
           placeholder="Submit"
         />
 
@@ -49,11 +52,11 @@ const Footer = () => {
           </div>
         )}
       </form>
-      <div className="social-container">
-        <span className="social-icon fa fa-youtube-play"></span>
-        <span className="social-icon fa fa-instagram"></span>
-        <span className="social-icon fa fa-linkedin"></span>
-        <span className="social-icon fa fa-twitter"></span>
+      <div className={footerStyles.socialContainer}>
+        <span className={`${footerStyles.socialIcon} fa fa-youtube-play`} />
+        <span className={`${footerStyles.socialIcon} fa fa-instagram`} />
+        <span className={`${footerStyles.socialIcon} fa fa-linkedin`} />
+        <span className={`${footerStyles.socialIcon} fa fa-twitter`} />
       </div>
     </footer>
   )

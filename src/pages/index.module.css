@@ -1,0 +1,30 @@
+.post-container {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+/* TODO might not need */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+  .post-container {
+    margin: 4rem 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+  .post-container {
+    margin: 4rem 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 768px) {
+  .post-container {
+    margin: 4rem 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

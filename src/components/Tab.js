@@ -1,20 +1,22 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "../global.css"
+import tabStyles from "./tab.module.css"
+
+const { tabListItem, active } = tabStyles
 
 const Tab = props => {
-  let className = "tab-list-item"
-
-  if (props.label === props.active) {
-    className += " active"
-  }
-
   const onClick = () => {
     props.onClick(props.label)
   }
 
   return (
-    <li onClick={onClick} className={className}>
+    <li
+      onClick={onClick}
+      className={
+        props.label === props.active ? `${tabListItem} ${active}` : tabListItem
+      }
+    >
       {props.label}
     </li>
   )
