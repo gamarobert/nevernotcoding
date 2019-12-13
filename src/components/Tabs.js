@@ -15,7 +15,7 @@ const Tabs = props => {
   return (
     <>
       <div className={tabs}>
-        <ul className={tabList} role="tablist">
+        <div className={tabList} role="tablist">
           {props.children.map(child => {
             const { label } = child.props
             return (
@@ -27,7 +27,7 @@ const Tabs = props => {
               />
             )
           })}
-        </ul>
+        </div>
       </div>
 
       <div className={tabContent}>

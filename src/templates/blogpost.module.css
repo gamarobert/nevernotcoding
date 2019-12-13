@@ -1,3 +1,17 @@
 .blog-text {
   margin-bottom: 4rem;
 }
+
+.divider {
+  /* Todo: add styling */
+}
+
+.author {
+  /* Todo: add styling */
+}
+
+.featured-image {
+  margin: 0 0 5rem 0;
+  height: 30vh;
+  border-radius: 44px;
+}

@@ -11,14 +11,15 @@ const Tab = props => {
   }
 
   return (
-    <li
-      onClick={onClick}
+    <button
       className={
         props.label === props.active ? `${tabListItem} ${active}` : tabListItem
       }
+      onClick={onClick}
+      onKeyDown={onClick}
     >
       {props.label}
-    </li>
+    </button>
   )
 }
 

@@ -1,7 +1,7 @@
 ---
 title: "The title of this post was made to be long for development purposes"
 date: "2019-20-11"
-featuredImage: "../assets/computer.jpg"
+featuredImage: "../assets/banner.jpg"
 category: "Code"
 ---
 
