@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "./NeverNotCoding",
+    title: "./nevernotcoding",
     description: "A blog using JuxtaDev starter",
     author: "Robert Gama",
     // add logo?

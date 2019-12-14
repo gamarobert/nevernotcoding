@@ -58,8 +58,6 @@
   color: black;
 }
 
-/* TODO might not need */
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
   .post-content {
     padding: 35px 15px;

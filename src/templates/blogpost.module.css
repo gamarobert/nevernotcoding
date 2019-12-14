@@ -1,17 +1,29 @@
 .blog-text {
+  letter-spacing: 1px;
   margin-bottom: 4rem;
 }
 
 .divider {
-  /* Todo: add styling */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 1.5rem;
+  font-size: 0.75rem;
 }
 
-.author {
-  /* Todo: add styling */
+.author,
+.date {
+  display: inline;
+  margin-right: 10px;
+}
+
+.user-icon,
+.calender-icon {
+  margin-right: 10px;
 }
 
 .featured-image {
   margin: 0 0 5rem 0;
-  height: 30vh;
+  height: 40vh;
   border-radius: 44px;
 }

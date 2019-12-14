@@ -1,7 +1,7 @@
 ---
 author: "Robert Gama"
 title: "How to Write your first post in GatsbyJS"
-date: "2019-19-11"
+date: "2019-11-19"
 featuredImage: "../assets/computer.jpg"
 category: "Misc"
 ---

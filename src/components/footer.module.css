@@ -72,6 +72,27 @@
   margin: 0 auto;
 }
 
+/* Social Container */
+
+.twitter:hover {
+  background: #55acee;
+  color: white;
+}
+
+.linkedin:hover {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube:hover {
+  background: #bb0000;
+  color: white;
+}
+
+.instagram:hover {
+  background: #125688;
+  color: white;
+}
 /* 
 iPhone 5/SE
 */

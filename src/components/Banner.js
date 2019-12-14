@@ -1,7 +1,6 @@
 import React from "react"
 import logo from "../../content/assets/Logo.svg"
 import bannerImg from "../../content/assets/banner.jpg"
-// TODO add graphql for banner setting
 import bannerStyles from "./banner.module.css"
 const { banner, center } = bannerStyles
 

@@ -1,21 +1,27 @@
 import React from "react"
 import Layout from "../components/Layout.js"
 import SEO from "../components/Seo.js"
-import SideSocial from "../components/SideSocial.js"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import blogpostStyles from "./blogpost.module.css"
 
-const { blogText, featuredImage, divider, author } = blogpostStyles
+const {
+  blogText,
+  featuredImage,
+  divider,
+  author,
+  userIcon,
+  date,
+  calenderIcon,
+} = blogpostStyles
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <>
-      <SideSocial />
       <Layout title="./nevernotcoding">
         <div className="blog-post-container">
-          <SEO title="Blog Post Title" />
+          <SEO title={post.frontmatter.slug} />
           <h1>{post.frontmatter.title}</h1>
           <span className={divider}>
             {post.frontmatter.author ? (
@@ -24,10 +30,18 @@ export default ({ data }) => {
                 by {post.frontmatter.author}
               </h3>
             ) : null}
+            {post.frontmatter.date ? (
+              <h3 className={date}>
+                <div className={`${calenderIcon} fa fa-calendar`} />
+                Posted on {post.frontmatter.date}
+              </h3>
+            ) : null}
           </span>
           <Img
             className={featuredImage}
+            draggable="false"
             fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+            alt="Featured Image"
           />
           <div
             className={blogText}
@@ -46,6 +60,7 @@ export const query = graphql`
       frontmatter {
         author
         title
+        date(formatString: "MMMM DD, YYYY")
         category
         featuredImage {
           childImageSharp {

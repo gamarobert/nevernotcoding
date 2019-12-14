@@ -6,24 +6,3 @@ body {
   font-family: montserrat;
   font-style: normal;
 }
-
-/* TODO Might remove and add to module */
-.fa-twitter:hover {
-  background: #55acee;
-  color: white;
-}
-
-.fa-linkedin:hover {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-youtube-play:hover {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram:hover {
-  background: #125688;
-  color: white;
-}

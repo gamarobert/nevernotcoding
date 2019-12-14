@@ -1,6 +1,6 @@
 ---
 title: "How to lorem ipsum the right way."
-date: "2019-19-11"
+date: "2019-11-19"
 featuredImage: "../assets/computer.jpg"
 category: "Code"
 ---

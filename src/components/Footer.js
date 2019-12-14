@@ -53,10 +53,18 @@ const Footer = () => {
         )}
       </form>
       <div className={footerStyles.socialContainer}>
-        <span className={`${footerStyles.socialIcon} fa fa-youtube-play`} />
-        <span className={`${footerStyles.socialIcon} fa fa-instagram`} />
-        <span className={`${footerStyles.socialIcon} fa fa-linkedin`} />
-        <span className={`${footerStyles.socialIcon} fa fa-twitter`} />
+        <span
+          className={`${footerStyles.socialIcon} ${footerStyles.youtube} fa fa-youtube-play`}
+        />
+        <span
+          className={`${footerStyles.socialIcon} ${footerStyles.instagram} fa fa-instagram`}
+        />
+        <span
+          className={`${footerStyles.socialIcon} ${footerStyles.linkedin} fa fa-linkedin`}
+        />
+        <span
+          className={`${footerStyles.socialIcon} ${footerStyles.twitter} fa fa-twitter`}
+        />
       </div>
     </footer>
   )
