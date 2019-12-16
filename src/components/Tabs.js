@@ -10,7 +10,7 @@ const Tabs = props => {
     setActive(label)
   }
 
-  const { tabs, tabList, tabContent } = tabsStyles
+  const { tabs, tabList } = tabsStyles
 
   return (
     <>
@@ -30,7 +30,7 @@ const Tabs = props => {
         </div>
       </div>
 
-      <div className={tabContent}>
+      <div>
         {props.children.map(child => {
           if (child.props.label === active) return child.props.children
           return undefined

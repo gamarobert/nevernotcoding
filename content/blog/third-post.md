@@ -1,4 +1,5 @@
 ---
+author: "Robert Gama"
 title: "The title of this post was made to be long for development purposes"
 # date: "YYYY-MM-DD"
 date: "2019-11-19"

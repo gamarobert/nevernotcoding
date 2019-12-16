@@ -1,5 +1,7 @@
 ---
+author: "Robert Gama"
 title: "How to lorem ipsum the right way."
+# date: "YYYY-MM-DD"
 date: "2019-11-19"
 featuredImage: "../assets/computer.jpg"
 category: "Code"

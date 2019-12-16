@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 2vh auto;
-  width: 45rem;
+  width: 100vw;
   max-width: 45rem;
 }
 
@@ -23,39 +23,60 @@
   text-decoration: none;
   font-size: 1.25rem;
   padding: 0px;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .link-item {
   box-shadow: none;
   text-decoration: none;
   color: black;
-  margin: 0.625rem;
+  margin-left: 0.625rem;
   letter-spacing: 0.085em;
   cursor: pointer;
 }
+
+.navbar .menu-icon {
+  display: none;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
   .navbar {
-    margin: 2vh auto;
-    width: 20rem;
-    max-width: 20rem;
+    margin: 2vh 0;
+    width: 100vw;
+  }
+  .links {
     display: none;
+  }
+  .navbar .menu-icon {
+    display: block;
+    margin-right: 10px;
   }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
   .navbar {
-    margin: 2vh auto;
-    width: 23.4375rem;
-    max-width: 23.4375rem;
+    margin: 2vh 0;
+    width: 100vw;
+  }
+  .links {
     display: none;
+  }
+  .navbar .menu-icon {
+    display: block;
+    margin-right: 10px;
   }
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 768px) {
   .navbar {
-    margin: 2vh auto;
-    width: 25.875rem;
-    max-width: 25.875rem;
+    margin: 2vh 0;
+    width: 100vw;
+  }
+  .links {
+    display: none;
+  }
+  .navbar .menu-icon {
+    display: block;
+    margin-right: 10px;
   }
 }

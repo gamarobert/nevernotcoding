@@ -8,27 +8,24 @@
   flex-grow: 1;
   margin: 0 auto;
   min-width: 25rem;
-  width: 100%;
+  width: 100vw;
   max-width: 45rem;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
   .site-content {
-    width: 20rem;
-    max-width: 20rem;
+    min-width: 100vw;
   }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
   .site-content {
-    min-width: 23.4375rem;
-    max-width: 23.4375rem;
+    min-width: 100vw;
   }
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 768px) {
   .site-content {
-    min-width: 25.875rem;
-    max-width: 25.875rem;
+    min-width: 100vw;
   }
 }

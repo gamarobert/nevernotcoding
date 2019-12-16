@@ -20,34 +20,32 @@ export default ({ data }) => {
   return (
     <>
       <Layout title="./nevernotcoding">
-        <div className="blog-post-container">
-          <SEO title={post.frontmatter.slug} />
-          <h1>{post.frontmatter.title}</h1>
-          <span className={divider}>
-            {post.frontmatter.author ? (
-              <h3 className={author}>
-                <div className={`${userIcon} fa fa-user-circle`} />
-                by {post.frontmatter.author}
-              </h3>
-            ) : null}
-            {post.frontmatter.date ? (
-              <h3 className={date}>
-                <div className={`${calenderIcon} fa fa-calendar`} />
-                Posted on {post.frontmatter.date}
-              </h3>
-            ) : null}
-          </span>
-          <Img
-            className={featuredImage}
-            draggable="false"
-            fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-            alt="Featured Image"
-          />
-          <div
-            className={blogText}
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          ></div>
-        </div>
+        <SEO title={post.frontmatter.slug} />
+        <h1>{post.frontmatter.title}</h1>
+        <span className={divider}>
+          {post.frontmatter.author ? (
+            <h3 className={author}>
+              <div className={`${userIcon} fa fa-user-circle`} />
+              by {post.frontmatter.author}
+            </h3>
+          ) : null}
+          {post.frontmatter.date ? (
+            <h3 className={date}>
+              <div className={`${calenderIcon} fa fa-calendar`} />
+              Posted on {post.frontmatter.date}
+            </h3>
+          ) : null}
+        </span>
+        <Img
+          className={featuredImage}
+          draggable="false"
+          fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+          alt="Featured Image"
+        />
+        <div
+          className={blogText}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        ></div>
       </Layout>
     </>
   )

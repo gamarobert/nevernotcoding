@@ -12,6 +12,7 @@
   border-right: 5px solid #463eca;
   background: #ebe9e9;
   scrollbar-width: thin;
+  /* min-width: 100vw; */
 }
 
 .tabs::-webkit-scrollbar {
@@ -24,8 +25,4 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.tab-content {
-  margin: 0 10px;
 }

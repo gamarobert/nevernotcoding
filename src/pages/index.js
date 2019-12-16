@@ -23,17 +23,18 @@ const BlogIndex = ({ data }) => {
   const { postContainer } = indexStyles
   return (
     <Layout title={data.site.siteMetadata.title}>
-      <SEO title="Blog" />
+      <SEO title="Home" />
       <Banner />
       <Tabs>
-        {categories.map(category => {
+        {categories.map((category, id) => {
           return (
-            <div key={category} label={category}>
+            <div key={id} label={category}>
               <div className={postContainer}>
                 {posts.map(({ node }) => {
                   if (node.frontmatter.category === category) {
                     return (
                       <Post
+                        key={node.id}
                         title={node.frontmatter.title}
                         slug={node.fields.slug}
                         excerpt={node.excerpt}
@@ -63,6 +64,7 @@ export const query = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
+          id
           frontmatter {
             title
             category

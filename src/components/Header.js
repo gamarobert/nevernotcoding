@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import headerStyles from "./header.module.css"
 
-const { navbar, logo, logoLink, links, linkItem } = headerStyles
+const { navbar, logo, logoLink, links, linkItem, menuIcon } = headerStyles
 
 const Header = ({ title }) => {
   return (
@@ -14,18 +14,21 @@ const Header = ({ title }) => {
             {title}
           </Link>
         </span>
-        <ul className={links}>
-          <li>
-            <Link className={linkItem} to={"/"}>
-              blog
-            </Link>
-          </li>
-          <li>
-            <Link className={linkItem} to={"/about"}>
-              about
-            </Link>
-          </li>
-        </ul>
+        <div>
+          <ul className={links}>
+            <li>
+              <Link className={linkItem} to={"/"}>
+                home
+              </Link>
+            </li>
+            <li>
+              <Link className={linkItem} to={"/about"}>
+                about
+              </Link>
+            </li>
+          </ul>
+          <div className={`${menuIcon} fa fa-bars`} />
+        </div>
       </nav>
     </header>
   )
