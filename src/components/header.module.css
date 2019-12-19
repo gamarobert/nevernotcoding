@@ -1,82 +1,75 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   margin: 2vh auto;
   width: 100vw;
   max-width: 45rem;
 }
-
-.logo {
-  font-size: 1.25rem;
-  background: black;
+.main-nav {
+  list-style-type: none;
+  display: none;
+  margin: 20px 0;
 }
 
-.logo-link {
+.nav-item {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav-item > a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  margin-left: 1rem;
+  color: black;
+  letter-spacing: 0.085em;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo > a {
+  font-size: 1.25rem;
+  background: black;
   color: white;
   text-decoration: none;
 }
 
-.links {
-  display: flex;
-  list-style: none;
-  text-decoration: none;
-  font-size: 1.25rem;
-  padding: 0px;
-  margin-left: 5px;
-}
-
-.link-item {
-  box-shadow: none;
-  text-decoration: none;
-  color: black;
-  margin-left: 0.625rem;
-  letter-spacing: 0.085em;
+.navbar .menu-icon {
+  position: absolute;
+  top: 0;
+  right: 15px;
   cursor: pointer;
 }
 
-.navbar .menu-icon {
-  display: none;
+.toggle {
+  display: block;
+  padding: 0;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-  .navbar {
-    margin: 2vh 0;
-    width: 100vw;
-  }
-  .links {
-    display: none;
-  }
-  .navbar .menu-icon {
-    display: block;
-    margin-right: 10px;
-  }
+.active {
+  background: darkblue;
+  color: #f2f2f2 !important;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+@media only screen and (min-device-width: 768px) {
   .navbar {
-    margin: 2vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh auto;
     width: 100vw;
   }
-  .links {
-    display: none;
-  }
-  .navbar .menu-icon {
-    display: block;
-    margin-right: 10px;
-  }
-}
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 768px) {
-  .navbar {
-    margin: 2vh 0;
-    width: 100vw;
+  .main-nav {
+    display: flex;
+    margin: 0 10px;
   }
-  .links {
-    display: none;
+
+  .nav-item {
+    padding: 0;
   }
   .navbar .menu-icon {
-    display: block;
-    margin-right: 10px;
+    display: none;
   }
 }

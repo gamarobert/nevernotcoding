@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
-
 import footerStyles from "./footer.module.css"
 
 const Footer = () => {
@@ -37,13 +36,13 @@ const Footer = () => {
         />
         <input
           type="submit"
-          // className="button submit-btn"
           className={footerStyles.submitBtn}
           placeholder="Submit"
         />
 
         {state.result.result === "error" ? (
           <div style={{ display: "block", marginTop: "20px", color: "red" }}>
+            {/* manipulation of mail chimp response for error */}
             {state.result.msg.split(". ")[0]}
           </div>
         ) : (
@@ -53,18 +52,29 @@ const Footer = () => {
         )}
       </form>
       <div className={footerStyles.socialContainer}>
-        <span
-          className={`${footerStyles.socialIcon} ${footerStyles.youtube} fa fa-youtube-play`}
-        />
-        <span
-          className={`${footerStyles.socialIcon} ${footerStyles.instagram} fa fa-instagram`}
-        />
-        <span
-          className={`${footerStyles.socialIcon} ${footerStyles.linkedin} fa fa-linkedin`}
-        />
-        <span
-          className={`${footerStyles.socialIcon} ${footerStyles.twitter} fa fa-twitter`}
-        />
+        <a href="https://www.youtube.com/channel/UCD58OI8Vu_81SvbzOXhOOHA">
+          <span
+            className={`${footerStyles.socialIcon} ${footerStyles.youtube} fa fa-youtube-play`}
+          />
+        </a>
+
+        <a href="https://www.instagram.com/nevernotcoding">
+          <span
+            className={`${footerStyles.socialIcon} ${footerStyles.instagram} fa fa-instagram`}
+          />
+        </a>
+
+        {/* <a href="https://www.linkedin.com">
+          <span
+            className={`${footerStyles.socialIcon} ${footerStyles.linkedin} fa fa-linkedin`}
+          />
+        </a> */}
+
+        <a href="https://www.twitter.com/nevernotcoding1">
+          <span
+            className={`${footerStyles.socialIcon} ${footerStyles.twitter} fa fa-twitter`}
+          />
+        </a>
       </div>
     </footer>
   )

@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 import blogpostStyles from "./blogpost.module.css"
 
 const {
+  blogTitle,
   blogText,
   featuredImage,
   divider,
@@ -20,8 +21,8 @@ export default ({ data }) => {
   return (
     <>
       <Layout title="./nevernotcoding">
-        <SEO title={post.frontmatter.slug} />
-        <h1>{post.frontmatter.title}</h1>
+        <SEO title={post.frontmatter.title} />
+        <h1 className={blogTitle}>{post.frontmatter.title}</h1>
         <span className={divider}>
           {post.frontmatter.author ? (
             <h3 className={author}>
@@ -38,7 +39,7 @@ export default ({ data }) => {
         </span>
         <Img
           className={featuredImage}
-          draggable="false"
+          draggable={false}
           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
           alt="Featured Image"
         />
