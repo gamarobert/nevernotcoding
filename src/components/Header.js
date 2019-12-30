@@ -1,35 +1,34 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import headerStyles from "./header.module.css"
-
-const {
-  navbar,
-  mainNav,
-  navItem,
-  logo,
-  toggle,
-  menuIcon,
-  active,
-} = headerStyles
-
-const handleClick = e => {
-  e.preventDefault()
-  let mainNav = document.getElementById("menu")
-  let menuIcon = document.getElementById("menu-icon")
-
-  if (!mainNav.classList.contains(toggle)) {
-    mainNav.classList.add(toggle)
-    menuIcon.classList.remove("fa-bars")
-    menuIcon.classList.add("fa-times")
-  } else {
-    mainNav.classList.remove(toggle)
-    menuIcon.classList.remove("fa-times")
-    menuIcon.classList.add("fa-bars")
-  }
-}
+import PropTypes from "prop-types"
 
 const Header = ({ title }) => {
+  const {
+    navbar,
+    mainNav,
+    navItem,
+    logo,
+    toggle,
+    menuIcon,
+    active,
+  } = headerStyles
+
+  const handleClick = e => {
+    e.preventDefault()
+    let mainNav = document.getElementById("menu")
+    let menuIcon = document.getElementById("menu-icon")
+
+    if (!mainNav.classList.contains(toggle)) {
+      mainNav.classList.add(toggle)
+      menuIcon.classList.remove("fa-bars")
+      menuIcon.classList.add("fa-times")
+    } else {
+      mainNav.classList.remove(toggle)
+      menuIcon.classList.remove("fa-times")
+      menuIcon.classList.add("fa-bars")
+    }
+  }
   return (
     <header>
       <nav className={navbar}>
@@ -59,6 +58,10 @@ const Header = ({ title }) => {
       </nav>
     </header>
   )
+}
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
 }
 
 export default Header

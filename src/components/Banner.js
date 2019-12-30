@@ -1,10 +1,10 @@
 import React from "react"
-import logo from "../../content/assets/Logo.svg"
+import PropTypes from "prop-types"
 import bannerImg from "../../content/assets/banner.jpg"
 import bannerStyles from "./banner.module.css"
 const { banner, center } = bannerStyles
 
-const Banner = () => {
+const Banner = ({ logo }) => {
   return (
     <div
       style={{
@@ -17,6 +17,10 @@ const Banner = () => {
       <img className={center} src={logo} alt="Logo" />
     </div>
   )
+}
+
+Banner.propTypes = {
+  logo: PropTypes.string,
 }
 
 export default Banner

@@ -1,12 +1,13 @@
 import React from "react"
+import PropTypes from "prop-types"
 import Footer from "../components/Footer.js"
 import Header from "../components/Header.js"
-import "../global.css"
 import layoutStyles from "./layout.module.css"
-
-const { site, siteContent } = layoutStyles
+import "../global.css"
 
 const Layout = ({ title, children }) => {
+  const { site, siteContent } = layoutStyles
+
   return (
     <>
       <div className={site}>
@@ -16,6 +17,11 @@ const Layout = ({ title, children }) => {
       </div>
     </>
   )
+}
+
+Layout.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
 }
 
 export default Layout

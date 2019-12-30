@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import PropTypes from "prop-types"
 import Tab from "../components/Tab.js"
 import "../global.css"
 import tabsStyles from "./tabs.module.css"
@@ -20,7 +21,7 @@ const Tabs = props => {
             const { label } = child.props
             return (
               <Tab
-                active={active}
+                isActive={active}
                 onClick={onClickTab}
                 key={label}
                 label={label}
@@ -40,11 +41,8 @@ const Tabs = props => {
   )
 }
 
-export default Tabs
+Tabs.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
-/*
-1. categories for blog posts
-2. graphql for getting posts
-3. display as tabs
-4. display posts in tabs respectively
-*/
+export default Tabs

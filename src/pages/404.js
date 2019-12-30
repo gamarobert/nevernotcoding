@@ -1,8 +1,9 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import errorStyles from "./404.module.css"
 
-export default ({ data }) => {
+const NotFound = ({ data }) => {
   const pages = data.allSitePage.edges
   const { container, title, text, button, list } = errorStyles
 
@@ -27,6 +28,11 @@ export default ({ data }) => {
   )
 }
 
+NotFound.propTypes = {
+  data: PropTypes.object.isRequired,
+  edges: PropTypes.array.isRequired,
+}
+
 export const query = graphql`
   query {
     allSitePage(
@@ -41,3 +47,5 @@ export const query = graphql`
     }
   }
 `
+
+export default NotFound

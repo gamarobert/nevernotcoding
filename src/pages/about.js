@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import Layout from "../components/Layout.js"
 import SEO from "../components/Seo.js"
 import { graphql } from "gatsby"
@@ -26,6 +27,11 @@ const About = ({ data }) => {
       </div>
     </Layout>
   )
+}
+
+About.propTypes = {
+  data: PropTypes.object.isRequired,
+  edges: PropTypes.array.isRequired,
 }
 
 export const query = graphql`

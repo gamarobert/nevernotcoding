@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import SEO from "../components/Seo.js"
@@ -10,6 +11,8 @@ import "../global.css"
 import indexStyles from "./index.module.css"
 
 const BlogIndex = ({ data }) => {
+  const { postContainer } = indexStyles
+
   const posts = data.allMarkdownRemark.edges
 
   const categories = [
@@ -20,11 +23,10 @@ const BlogIndex = ({ data }) => {
     ),
   ]
 
-  const { postContainer } = indexStyles
   return (
     <Layout title={data.site.siteMetadata.title}>
       <SEO title="Home" />
-      <Banner />
+      <Banner logo={data.site.siteMetadata.logo} />
       <Tabs>
         {categories.map((category, id) => {
           return (
@@ -54,11 +56,15 @@ const BlogIndex = ({ data }) => {
   )
 }
 
+BlogIndex.propTypes = {
+  data: PropTypes.object.isRequired,
+}
 export const query = graphql`
   query {
     site {
       siteMetadata {
         title
+        logo
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

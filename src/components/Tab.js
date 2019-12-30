@@ -3,28 +3,28 @@ import PropTypes from "prop-types"
 import "../global.css"
 import tabStyles from "./tab.module.css"
 
-const { tabListItem, active } = tabStyles
+const Tab = ({ label, isActive, onClick }) => {
+  const { tabListItem, active } = tabStyles
 
-const Tab = props => {
-  const onClick = () => {
-    props.onClick(props.label)
+  const handleClick = () => {
+    onClick(label)
   }
 
   return (
     <button
-      className={
-        props.label === props.active ? `${tabListItem} ${active}` : tabListItem
-      }
-      onClick={onClick}
-      onKeyDown={onClick}
+      className={label === isActive ? `${tabListItem} ${active}` : tabListItem}
+      onClick={handleClick}
+      onKeyDown={handleClick}
     >
-      {props.label}
+      {label}
     </button>
   )
 }
 
 Tab.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  isActive: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 }
 
 export default Tab
